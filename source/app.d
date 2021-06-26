@@ -10,7 +10,7 @@ void main()
 	writeln(parseAsepriteJSON("rotate_png.json"));
 }
 
-Frame[] parseAsepriteJSON(string path)
+Frame[] parseAsepriteJSON(in string path)
 {
 	Frame[] result;
 
@@ -20,7 +20,7 @@ Frame[] parseAsepriteJSON(string path)
 	foreach(jsonFrame; jsonTree["frames"].array)
 	{
 		Frame f;
-		f.filename = jsonFrame["filename"].str;
+		f.filename = jsonFrame["filename"].str.split[0] ~ ".png"; //remove "N .gif" and append actual extension
 		f.bounds = jsonToRectangle(jsonFrame["frame"]);
 		result ~= f;
 	}
@@ -34,7 +34,7 @@ struct Frame
 	Rectangle bounds;
 }
 
-private string fileContents(string filename)
+private string fileContents(in string filename)
 {
 	char[] result;
 
@@ -51,7 +51,7 @@ private string fileContents(string filename)
 	return result.idup;
 }
 
-private Rectangle jsonToRectangle(JSONValue jsonRect)
+private Rectangle jsonToRectangle(in JSONValue jsonRect) @safe pure
 {
 	Rectangle r;
 	r.x = jsonRect["x"].get!(int);
