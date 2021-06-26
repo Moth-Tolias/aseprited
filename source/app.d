@@ -3,7 +3,6 @@ import std.string;
 import std.file;
 import std.json;
 import geometry.rectangle;
-//import std.conv;
 //import std.exception;
 
 void main()
@@ -35,7 +34,7 @@ struct Frame
 	Rectangle bounds;
 }
 
-string fileContents(string filename)
+private string fileContents(string filename)
 {
 	char[] result;
 
@@ -52,7 +51,7 @@ string fileContents(string filename)
 	return result.idup;
 }
 
-Rectangle jsonToRectangle(JSONValue jsonRect)
+private Rectangle jsonToRectangle(JSONValue jsonRect)
 {
 	Rectangle r;
 	r.x = jsonRect["x"].get!(int);
