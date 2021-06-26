@@ -2,6 +2,7 @@ import std.stdio;
 import std.string;
 import std.file;
 import std.json;
+import geometry.rectangle;
 //import std.conv;
 //import std.exception;
 
@@ -16,7 +17,7 @@ void main()
 struct Frame
 {
 	string filename;
-	//Rectangle bounds;
+	Rectangle bounds;
 }
 
 /*class Grammar

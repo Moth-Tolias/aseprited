@@ -5,5 +5,16 @@
 	"copyright": "Copyright © 2021, Susan",
 	"description": "parser for aseprite json",
 	"license": "AGPL-3.0 or later",
-	"name": "aseprited"
+	"name": "aseprited",
+	"dependencies": {
+		"aseprited:geometry": "*"
+	},
+	"subPackages": [
+		{
+			"name": "geometry",
+			"targetType": "library",
+			"sourcePaths": ["geometry/source"],
+			"importPaths": ["geometry/source"]
+		}
+	]
 }
