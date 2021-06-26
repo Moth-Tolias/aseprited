@@ -6,7 +6,7 @@ docs/
 aseprited.so
 aseprited.dylib
 aseprited.dll
-aseprited.a
+*.a
 aseprited.lib
 aseprited-test-*
 *.exe
