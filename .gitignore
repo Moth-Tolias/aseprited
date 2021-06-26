@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/aseprited
+aseprited.so
+aseprited.dylib
+aseprited.dll
+aseprited.a
+aseprited.lib
+aseprited-test-*
+*.exe
+*.o
+*.obj
+*.lst
