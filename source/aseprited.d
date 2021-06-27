@@ -1,3 +1,5 @@
+module aseprited;
+
 import std.stdio;
 import std.string;
 import std.file;
@@ -5,10 +7,6 @@ import std.json;
 import geometry.rectangle;
 //import std.exception;
 
-void main()
-{
-	writeln(parseAsepriteJSON("rotate_png.json"));
-}
 
 Frame[] parseAsepriteJSON(in string path)
 {

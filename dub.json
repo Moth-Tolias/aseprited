@@ -6,6 +6,7 @@
 	"description": "parser for aseprite json",
 	"license": "AGPL-3.0 or later",
 	"name": "aseprited",
+	"targetType": "library",
 	"dependencies": {
 		"aseprited:geometry": "*"
 	},
