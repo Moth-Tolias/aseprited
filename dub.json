@@ -13,9 +13,7 @@
 	"subPackages": [
 		{
 			"name": "geometry",
-			"targetType": "library",
-			"sourcePaths": ["geometry/source"],
-			"importPaths": ["geometry/source"]
+			"targetType": "library"
 		}
 	]
 }
