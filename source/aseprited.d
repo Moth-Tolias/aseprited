@@ -49,7 +49,7 @@ private string fileContents(in string filename)
 	return result.idup;
 }
 
-private Rectangle jsonToRectangle(in JSONValue jsonRect) @safe pure
+private Rectangle jsonToRectangle(JSONValue jsonRect) @safe pure
 {
 	Rectangle r;
 	r.x = jsonRect["x"].get!(int);
