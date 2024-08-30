@@ -1,6 +1,0 @@
-[submodule "geometry"]
-	path = source/geometry
-	url = https://github.com/Moth-Tolias/geometry
-[submodule "geometry/"]
-	branch = main
-	url = git@github.com:Moth-Tolias/geometry.git
